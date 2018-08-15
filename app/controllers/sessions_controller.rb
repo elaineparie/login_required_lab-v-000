@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
       if params[:name] == nil || params[:name].empty?
       redirect_to '/login'
       else
+        binding.pru
         session[:name] = params[:name]
         redirect_to '/'
       end
